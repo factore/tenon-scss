@@ -1,0 +1,21 @@
+{
+  "name": "tenon-scss",
+  "version": "2.1.0",
+  "description": "Tenon's stylesheets",
+  "main": "./index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/factore/tenon-scss.git"
+  },
+  "author": "factor[e] design initiative",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/factore/tenon-scss/issues"
+  },
+  "homepage": "https://github.com/factore/tenon-scss#readme",
+  "peerDependencies": {
+    "react": ">=15.0.0"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}

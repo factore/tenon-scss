@@ -1,0 +1,82 @@
+.app-info {
+  display: none;
+  margin: 0;
+
+  @include bp-md {
+    display: block;
+  }
+}
+
+.app-info--account {
+  display: block;
+
+  @include bp-md {
+    display: none;
+  }
+}
+
+.app-info__link {
+  @extend %truncate;
+  @extend %font-smaller;
+  @include default-transition;
+  display: block;
+  position: relative;
+  margin: 0;
+  border-bottom: 1px solid $light-border-color;
+  background: $app-info-bg-color;
+  padding: 13px $default-spacing;
+  padding-left: $default-spacing * 2.25;
+  height: $toolbar-height;
+  color: $black;
+
+  &:hover {
+    color: $black;
+    text-decoration: none;
+  }
+}
+
+.app-info__link--dropdown-button {
+  position: relative;
+
+  &::after {
+    @include font-size($standard-icon-size);
+    display: block;
+    position: absolute;
+    top: 0;
+    right: $default-spacing / 2;
+    color: $app-info-fg-color;
+    font-family: 'Material Icons';
+    content: 'keyboard_arrow_down';
+  }
+}
+
+.app-info__secondary {
+  color: $light-fg-color;
+}
+
+.app-info__logo,
+.app-info__avatar,
+.app-info__icon {
+  @include transform(translateY(-50%));
+  position: absolute;
+  top: 50%;
+  left: $default-spacing - 5px;
+}
+
+.app-info__avatar {
+  top: 4px;
+  border-radius: 50%;
+  background: $app-info-fg-color;
+  width: $main-nav-avatar-size;
+  height: $main-nav-avatar-size;
+  max-height: $main-nav-avatar-size;
+  text-align: center;
+  line-height: $main-nav-avatar-size + 8px;
+  color: $app-info-bg-color;
+}
+
+.app-info__icon {
+  @extend %material-icon;
+  @include font-size(32);
+  color: $app-info-icon-color;
+}
